@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="css/main.css">
@@ -10,59 +11,66 @@
         <nav>
             <a href="#" class="logo">Kei Hartley</a>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">My Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <section class="content">
+        <section class="content" id="home">
             <div class="text-container">
                 <p class="stagger1">Hi,</p>
                 <p class="stagger1">I'm Kei Hartley</p>
                 <p class="stagger1">I am a UX/UI Designer
                     <br class="stagger1"/>& Web Developer</p>
-                <button class="contact-btn stagger2">Contact Me</button>
+                <button class="contact-btn stagger2" id="myBtn">Contact Me</button>
                 <button class='down-resume stagger2'>Resume</button>
             </div>
             <img src="images/Picture.png" alt="" class="me">
         </section>
-        <div class="about-container transition2">
-            <div class="about-text">
-                <p>About Me</p>
-                <p>OCCUPATION</p>
-                <p>BIG PARAGRAPH ABOUT WHAT I DO</p>
-                <p>ONE MORE BIG PARAGRAPH</p>
-                <button>Contact</button>
-                <button>Download CSV</button>
+        <section id="about">
+            <div class="about-container transition2">
+                <div class="about-text">
+                    <p>About Me</p>
+                    <p>OCCUPATION</p>
+                    <p>BIG PARAGRAPH ABOUT WHAT I DO</p>
+                    <p>ONE MORE BIG PARAGRAPH</p>
+                    <button>Contact</button>
+                    <button>Download CSV</button>
+                </div>
             </div>
-        </div>
-        <div class="projects">
-            <div class="projects-text">
-                <p>PROJECTS</p>
-                <p>EXPLAINING STUFF ABOUT IT</p>
+        </section>
+        <section id="projects">
+            <div class="projects">
+                <div class="projects-text">
+                    <p>PROJECTS</p>
+                    <p>EXPLAINING STUFF ABOUT IT</p>
+                </div>
+                <div class="box-container">
+                    <ul>
+                        <li class="transition2">
+                            <p class="heading">Villavox Internship</p>
+                            <p class="link"><a href="https://villavox.com/" target='_blank'></a></p>
+                            <p class="details">Developed on a React & AWS website, <br />where I added mobile responsiveness</p>
+                        </li>
+                        <li class="transition2">
+                            <p class="heading">Flight SQL Database</p>
+                            <p class="details">Developed a SQL </p>
+                        </li>
+                        <li class="transition2">
+                            <p class="heading">HEADING TEXT</p>
+                            <p class="details">dwankjdwjnkajnkdlwajnl</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="box-container">
-                <ul>
-                    <li class="transition2">
-                        <p class="heading">HEADING TEXT</p>
-                        <p class="details">dwankjdwjnkajnkdlwajnl</p>
-                    </li>
-                    <li class="transition2">
-                        <p class="heading">HEADING TEXT</p>
-                        <p class="details">dwankjdwjnkajnkdlwajnl</p>
-                    </li>
-                    <li class="transition2">
-                        <p class="heading">HEADING TEXT</p>
-                        <p class="details">dwankjdwjnkajnkdlwajnl</p>
-                    </li>
-                </ul>
+        </section>
+        <section id="contact">
+            <div class="contact-me">
+                <p>SOMETHING ABOUT CONTACTING ME</p>
+                <button>Contact Me</button>
             </div>
-        </div>
-        <div class="contact-me">
-            <p>SOMETHING ABOUT CONTACTING ME</p>
-            <button>Contact Me</button>
-        </div>
+        </section>
         <footer>
             <p>SOMETHING SMALL</p>
             <p>WRITE A PARAGRAPH ABOUT SOMETHING SMALL</p>
@@ -78,12 +86,32 @@
             <a href="#"><img src="images/Icon feather-github.png" alt="Github"/></a>
             <a href="#"><img src="images/Icon awesome-linkedin-in.png" alt="LinkedIn"/></a>
         </div>
+        <div
+            id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="contact-box">
+                    <div class="left"></div>
+                    <div class="right">
+                        <span class="close">&times;</span>
+                        <h2>Contact Us</h2>
+                        <input type="text" class="field" placeholder="Your Name">
+                        <input type="text" class="field" placeholder="Your Email">
+                        <input type="text" class="field" placeholder="Phone">
+                        <textarea placeholder="Message" class="field"></textarea>
+                        <button class="btn">Send</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
         <script>
             gsap.registerPlugin(ScrollTrigger);
             var tl = gsap.timeline();
-
             tl.from('.content', {
                 y: '-30%',
                 opacity: '0',
@@ -92,7 +120,7 @@
             })
 
             tl.from('.stagger1', {
-                opacity: 0, 
+                opacity: 0,
                 y: -50,
                 stagger: .3,
                 ease: Power4.easeOut,
@@ -109,6 +137,32 @@
                 duration: 1.2,
                 stagger: .3
             })
+            var scroll = new SmoothScroll('.navbar a[href*="#"]', {speed: 10000});
+
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         </script>
     </body>
 </html>
